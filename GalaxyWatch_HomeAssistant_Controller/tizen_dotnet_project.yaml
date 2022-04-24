@@ -1,0 +1,13 @@
+# csproj file path
+csproj_file: GalaxyWatch_HomeAssistant_Controller.csproj
+
+# files monitored for dirty/modified status
+files:
+  - GalaxyWatch_HomeAssistant_Controller.csproj
+  - GalaxyWatch_HomeAssistant_Controller.cs
+  - App.xaml
+  - App.xaml.cs
+  - MainPage.xaml
+  - MainPage.xaml.cs
+  - tizen-manifest.xml
+  - shared/res/GalaxyWatch_HomeAssistant_Controller.png
