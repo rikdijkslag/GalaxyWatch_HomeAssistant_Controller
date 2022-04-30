@@ -14,11 +14,12 @@
 
   <ItemGroup>
     <Folder Include="lib\" />
-    <Folder Include="res\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.4" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.2" />
   </ItemGroup>
   
     
@@ -29,12 +30,24 @@
   <ItemGroup Condition="'$(Configuration)' != 'Release'">
     <PackageReference Include="TizenHotReloader" Version="1.0.1" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="ConnectionDataPage.xaml.cs">
+      <DependentUpon>ConnectionDataPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
     
   <ItemGroup>
     <EmbeddedResource Update="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ConnectionDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

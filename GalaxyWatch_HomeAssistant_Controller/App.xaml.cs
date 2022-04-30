@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,10 +15,18 @@ namespace GalaxyWatch_HomeAssistant_Controller
         public App()
         {
             InitializeComponent();
+            
+            //Check if it is the first login
+            if (Preferences.Get("FirstLogin", true) == false)
+            {
+                MainPage = new GalaxyWatch_HomeAssistant_Controller.MainPage();
+            } else
+            {
+                MainPage = new GalaxyWatch_HomeAssistant_Controller.ConnectionDataPage();
+            }
 
-            MainPage = new GalaxyWatch_HomeAssistant_Controller.MainPage();          
 #if DEBUG
-			TizenHotReloader.HotReloader.Open(this);
+            TizenHotReloader.HotReloader.Open(this);
 #endif
         }
 

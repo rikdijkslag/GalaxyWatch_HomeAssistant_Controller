@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalaxyWatch_HomeAssistant_Controller.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label  Text="Settings"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    HeightRequest="40"
+                    Margin="0, 10, 0, 0"
+                    />
+            <ScrollView x:Name="SettingView"
+                        >
+                <StackLayout  
+                    x:Name="SettingLayout">
+
+                    <Button
+                        x:Name="RemoveLights"
+                        Text="Remove Lights"
+                        Clicked="RemoveLights_Clicked"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0, 0, 0, 10"
+                        BackgroundColor="LightBlue"
+                        TextColor="Black"
+                        />
+                    <Button
+                        x:Name="AddLights"
+                        Text="Add Lights"
+                        Clicked="AddLights_Clicked"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0, 0, 0, 10"
+                        BackgroundColor="LightBlue"
+                        TextColor="Black"
+                        />
+                    <Button
+                        x:Name="ImportLights"
+                        Text="Import Lights"
+                        Clicked="ImportLights_Clicked"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0, 0, 0, 10"
+                        BackgroundColor="LightBlue"
+                        TextColor="Black"
+                        />
+                    <Button
+                        x:Name="ConnectionData"
+                        Text="Connection Data"
+                        Clicked="ConnectionData_Clicked"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0, 0, 0, 10"
+                        BackgroundColor="LightBlue"
+                        TextColor="Black"
+                        />
+                </StackLayout>
+            </ScrollView >
+
+            <ScrollView
+                    x:Name="AddLightView"
+                    IsVisible="false"
+                                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                    >
+                <StackLayout  
+                        x:Name="AddLightLayout"
+
+                        >
+
+                    <Label  
+                        Text="Entity ID:"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        HeightRequest="40"
+                        Margin="0, 15, 0, 5"
+                        TextColor="LightBlue"
+                    />
+                    <Entry 
+                        Placeholder="ID:"
+                        x:Name="TbxEntityid"
+                        WidthRequest="300"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Margin="0, 5, 0, 5"
+                    />
+                    <Button
+                        x:Name="BtnAddLight"
+                        Text="Add"
+                        Clicked="BtnAddLight_Clicked"
+                        WidthRequest="100"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="LightBlue"
+                        TextColor="Black"
+                        Margin="0, 5, 0, 40"
+                    />
+                </StackLayout>
+            </ScrollView>
+
+            <ImageButton
+                x:Name="BtnBack"
+                AutomationId="setting"
+                ClassId="setting"
+                Clicked="BtnBack_Clicked"
+                Source="back.png"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="60"
+                Margin="0, 0, 0, 10"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="crl-namespace:ScrollViewDemos"
+             x:Class="GalaxyWatch_HomeAssistant_Controller.ConnectionDataPage">
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" HeightRequest="3000">
+            <StackLayout Orientation="Vertical">
+                <Label 
+                    TextColor="LightBlue"
+                    Text="Connect with Home Assistant"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Margin="0, 50, 0, 10"
+                    HorizontalTextAlignment="Center"
+                />
+
+                <Label
+                    Margin="20, 0, 0, 5"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    Text="Ip Adressss"
+                    FontSize="25"
+                />
+                
+                <Entry
+                    x:Name="TbxIpAdress"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    Placeholder="Ip:"
+                    WidthRequest="300"
+                />
+
+                <Label
+                    Margin="20, 40, 0, 5"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    Text="Port"
+                    FontSize="25"
+                />
+                <Entry
+                    x:Name="TbxPort"
+                    Text="8123"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    Placeholder="Port:"
+                    WidthRequest="300"
+                />
+
+                <Label
+                    Margin="20, 40, 0, 5"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    Text="Api Key"
+                    FontSize="25"
+                />
+                <Entry
+                    x:Name="TbxApiKey"
+                    TextChanged="TbxApiKey_TextChanged"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    Placeholder="API Key:"
+                    WidthRequest="300"
+                />
+
+                <Button
+                    x:Name="BtnContinu"
+                    Clicked="BtnContinu_Clicked"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    Text="Continu"
+                    WidthRequest="150"
+                    Margin="0 ,40 ,0 ,30"
+                    
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
