@@ -9,7 +9,7 @@ This app is currently only for Samsung watches with tizen soon i will make a Wea
 
 # Setup Connection
 <p float="left">
-  <img src="/img1.png" width="100" />
+  <img src="https://www.dropbox.com/s/tqrb3gopdyncfxy/Setup1.png?dl=1" width="100" />
   <img src="/img2.png" width="100" /> 
   <img src="/img3.png" width="100" />
 </p>
